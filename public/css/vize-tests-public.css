@@ -1,0 +1,327 @@
+div.vize_tests_wrapper,
+div.vize_tests_results_wrapper {
+    clear: both;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+div.vize_test_question_container {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #535353;
+}
+
+div.vize_test_question_container div.clear {
+    clear: both;
+}
+
+div.vize_test_question_container div.vize_test_answers_wrapper {
+    margin-left: 20px;
+}
+
+div.vize_test_answers_wrapper table {
+    margin: 0px;
+    width: 100%;
+}
+
+div.vize_test_answers_wrapper table,
+div.vize_test_answers_wrapper table tbody,
+div.vize_test_answers_wrapper table tr,
+div.vize_test_answers_wrapper table td {
+    border: 0px !important;
+}
+
+div.vize_test_question_container p.vize_test_question {
+    margin-bottom: 10px !important;
+}
+
+td.answer_text {
+    border: none !important;
+}
+
+td.answer_text label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0px !important;
+    border-bottom: 1px dotted;
+    line-height: 22px;
+}
+
+div.vize_test_question_container.error {
+    border: 1px solid #fe2d2d;
+    padding: 5px;
+}
+
+div.vize_tests_navigation_wrapper {
+    padding: 15px 0px;
+    display: block;
+    text-align: center;
+}
+
+div.vize_tests_navigation_wrapper div.clear {
+    clear: both;
+}
+
+div.vize_tests_results_wrapper,
+div.vize_tests_results_loading_wrapper,
+div.vize_tests_results_loading_wrapper div.loading-text {
+    text-align: center;
+}
+
+div.vize_tests_results_wrapper h2.test_results_for {
+    text-transform: uppercase;
+}
+
+div.vize_tests_results_wrapper h2.test_title {
+    font-size: 3.5rem;
+}
+
+div.vize_tests_results_wrapper div.test_score_indicator {
+    width: auto;
+    height: 60px;
+    margin: 10px 30px;
+    background-color: #fe2d2d;
+}
+
+.test_score_indicator .user_score_value {
+    margin-left: 20px;
+    font-size: 2.0rem;
+    color: #ffffff;
+    line-height: 60px;
+    float: left;
+    position: absolute;
+}
+
+.test_score_indicator .user_score_indicator {
+    background-color: #1bd760;
+    height: 60px;
+    float: left;
+
+}
+
+h2.test_result {
+    font-size: 3.0em;
+    text-transform: uppercase;
+    margin: 15px 0px !important;
+}
+
+h2.test_result.icon_test_failed::after {
+    content: '\2639';
+    position: relative;
+    top: 4px;
+    left: 10px;
+}
+
+h2.test_result.icon_test_passed:after {
+    content: '\263A';
+}
+
+h2.test_result.icon_test_failed::after,
+h2.test_result.icon_test_passed::after {
+    font-size: 1.3em;
+    text-transform: none !important;
+}
+
+#rewrite_test_button_container {
+    text-align: center;
+}
+
+/* Custom Radio */
+/* Customize the label (the answer_radio_container) */
+.answer_radio_container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    height: 25px;
+    width: 25px;
+    background-color: #3e3e3e;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.answer_radio_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.answer_radio_container .checkmark, .answer_radio_container .correct_answer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #3e3e3e;
+    margin: 0px;
+    display: block;
+}
+
+/* On mouse-over, add a grey background color */
+.answer_radio_container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.answer_radio_container input:checked ~ .checkmark {
+    /*background-color: #2196F3;*/
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.answer_radio_container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.answer_radio_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.answer_radio_container .checkmark:after {
+    content: "x";
+    left: 7px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+/* .Custom Radio */
+
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.alert .alert-link {
+    font-weight: bold;
+}
+
+.alert > p,
+.alert > ul {
+    margin-bottom: 0;
+}
+
+.alert > p + p {
+    margin-top: 5px;
+}
+
+.alert-dismissable,
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-success hr {
+    border-top-color: #c9e2b3;
+}
+
+.alert-success .alert-link {
+    color: #2b542c;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.alert-info hr {
+    border-top-color: #a6e1ec;
+}
+
+.alert-info .alert-link {
+    color: #245269;
+}
+
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.alert-warning hr {
+    border-top-color: #f7e1b5;
+}
+
+.alert-warning .alert-link {
+    color: #66512c;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.alert-danger hr {
+    border-top-color: #e4b9c0;
+}
+
+.alert-danger .alert-link {
+    color: #843534;
+}
+
+/* .Alerts */
+
+/* Loader */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #3e3e3e;
+    border-color: #3e3e3e transparent #3e3e3e transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* .Loader */

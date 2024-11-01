@@ -1,0 +1,146 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+form.vize-tests-forms .form-field input[type=text],
+form.vize-tests-forms .form-field textarea,
+form.vize-tests-forms .form-field select {
+    width: 30em;
+}
+
+form.vize-tests-forms .form-field textarea {
+    height: 10em;
+}
+
+form.vize-tests-forms input.error,
+form.vize-tests-forms textarea.error,
+form.vize-tests-forms select.error{
+    border: 1px solid #ff0000;
+}
+
+form.vize-tests-forms label.error {
+    display: block;
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+fieldset.answers-container {
+    border: 1px solid;
+    padding: 5px;
+    width: 630px;
+}
+
+fieldset.answers-container legend {
+    font-weight: bold;
+}
+
+label.selected-file-path {
+    vertical-align: bottom;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+img.vize-test-image-thumb {
+    width: 130px;
+}
+
+/*Start - Custom Radio & Checkbox CSS*/
+.input-radio,
+.input-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 28px;
+}
+.input-radio input,
+.input-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.input-radio input.error ~ .checkmark,
+.input-checkbox input.error ~ .checkmark {
+    border: 1px solid #ff0000;
+}
+
+.input-checkbox .checkmark {
+    border-radius: 0;
+}
+
+.input-block .checkmark {
+    left: 0;
+    right: auto;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 26px;
+    width: 26px;
+    border-radius: 5em;
+    border: 1px solid #242424;
+    margin: auto;
+}
+
+.input-radio:hover input ~ .checkmark {
+    background-color: #242424;
+}
+.input-radio input:checked ~ .checkmark {
+    background-color: #FFF;
+    border: 2px solid #242424;
+}
+.input-radio input:checked ~ .checkmark::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #242424;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    margin: auto;
+}
+
+.input-checkbox:hover input ~ .checkmark {
+    background-color: #242424;
+}
+.input-checkbox input:checked ~ .checkmark {
+    background-color: #242424;
+    border: 2px solid transparent;
+}
+.input-checkbox input:checked ~ .checkmark::after {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 2px;
+    font-size: 22px;
+    top: -5px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.input-radio label.error {
+    display: none !important;
+}
+/*End - Custom Radio & Checkbox CSS */
+
